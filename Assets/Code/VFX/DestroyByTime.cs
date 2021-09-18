@@ -18,5 +18,7 @@ public class DestroyByTime : MonoBehaviour
 	private IEnumerator WaitAndDestroy(float lifetime)
 	{
 		yield return new WaitForSeconds(lifetime);
+
+        GameObject.Destroy(this.gameObject);
 	}
 }

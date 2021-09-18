@@ -28,7 +28,7 @@ public class PageScene : MonoBehaviour
         pageObj.SetActive(false);
 
         var page = pageObj.GetComponent<GenericPage>();
-
+        page.Init("test", "yooo", AddPage);
         page.ShowPage();
     }
 }

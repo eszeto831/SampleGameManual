@@ -1,16 +1,15 @@
 ﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class ImageDialog : GenericPage
+public class ImagePage : GenericPage
 {
 	public Image Image;
-    
-	public void Init(string title, string text, string image, Action onNextPage)
-	{
-        base.Init(title, text, onNextPage);
-	}
 
-	public void Close()
+    override public void Init(DataPage data, Action onNextPage)
 	{
-	}
+        base.Init(data, onNextPage);
+        Image.sprite = Resources.Load<Sprite>(data.Image);
+
+    }
 }

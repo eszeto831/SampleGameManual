@@ -26,10 +26,10 @@ public class GenericPage : MonoBehaviour
         ExplodeBt.onClick.AddListener(NextPageExplode);
     }
 
-	public void Init(string title, string text, Action onNextPage)
+	virtual public void Init(DataPage data, Action onNextPage)
 	{
-		Title.text = title;
-		Text.text = text;
+		Title.text = data.Title;
+		Text.text = data.Text;
         m_onNextPage = onNextPage;
 
     }

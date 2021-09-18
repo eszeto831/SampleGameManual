@@ -8,6 +8,7 @@ public class StartScene : MonoBehaviour
     void Start ()
     {
         Application.runInBackground = true;
+        GameConfig.Instance.ParseConfig();
         SceneManager.LoadScene("PageScene");
     }
 

@@ -25,7 +25,7 @@ public class PageScene : MonoBehaviour
         var pageResource = Resources.Load("Prefabs/" + prefabPath) as GameObject;
         var pageObj = GameObject.Instantiate(pageResource) as GameObject;
         pageObj.transform.SetParent(PageContainer.transform, false);
-        pageObj.transform.localPosition = new Vector3(1000f, 0f, 0f);
+        pageObj.SetActive(false);
 
         var page = pageObj.GetComponent<GenericPage>();
 

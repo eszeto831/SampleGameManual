@@ -13,6 +13,7 @@ public class GenericPage : MonoBehaviour
 	public Button FlipBt;
     public Button SpinBt;
     public Button ExplodeBt;
+    public AudioSource ExplosionSFX;
 
     private float m_waitBeforeDestroyTime = 2f;
     private Action m_onNextPage;
@@ -76,6 +77,7 @@ public class GenericPage : MonoBehaviour
         Container.SetActive(false);
         var explosion = GameObject.Instantiate(Resources.Load("VFX/Explosion")) as GameObject;
         explosion.transform.localPosition = Vector3.zero;
+        ExplosionSFX.Play();
         yield return new WaitForSeconds(0.3f);
         NextPage();
     }

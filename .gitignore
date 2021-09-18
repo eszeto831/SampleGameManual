@@ -1,0 +1,16 @@
+Temp/
+build/
+
+Library/
+Obj/
+ 
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.DS_store
+
+*.vs
+
+steam_appid.txt

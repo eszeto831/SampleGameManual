@@ -42,18 +42,6 @@ public class PageScene : MonoBehaviour
         GenericPage page = null;
         page = pageObj.GetComponent<GenericPage>();
         page.Init(m_pages[m_currentPage], AddPage);
-        /*
-        if (string.IsNullOrEmpty(image))
-        {
-            page = pageObj.GetComponent<GenericPage>();
-            page.Init(m_pages[m_currentPage], AddPage);
-        }
-        else
-        {
-            page = pageObj.GetComponent<ImagePage>();
-            page.Init(m_pages[m_currentPage], AddPage);
-        }
-        */
         page.ShowPage();
 
         m_currentPage++;

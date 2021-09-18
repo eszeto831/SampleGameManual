@@ -14,7 +14,21 @@ public class PageScene : MonoBehaviour
 
 	public void Init()
 	{
-        VersionNumber.text = "v "+ "??";
+        AddPage();
 
+        VersionNumber.text = "v "+ "??";
+    }
+
+    public void AddPage()
+    {
+        var prefabPath = "PageTextOnly";
+        var pageResource = Resources.Load("Prefabs/" + prefabPath) as GameObject;
+        var pageObj = GameObject.Instantiate(pageResource) as GameObject;
+        pageObj.transform.SetParent(PageContainer.transform, false);
+        pageObj.transform.localPosition = new Vector3(1000f, 0f, 0f);
+
+        var page = pageObj.GetComponent<GenericPage>();
+
+        page.ShowPage();
     }
 }
